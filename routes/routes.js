@@ -1,16 +1,14 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
 
+//user controller import
+const { saveUser } = require('../Controller/userController')
 
 router.get('/',(req,res)=>{
-    res.send('<h1>WECOME TO FIRST APP....</h1>')
+    res.send('<h3>Welcome to this Project</h3>')
 })
 
-
-router.get('/about',(req,res)=>{
-    res.send('<h1>@@2222WECOME TO FIRST APP....</h1>')
-})
-
+router.post('/saveuser',saveUser )
 
 
 module.exports = router;
